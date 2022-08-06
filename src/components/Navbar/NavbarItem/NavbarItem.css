@@ -1,0 +1,9 @@
+.liItem {
+    text-transform: capitalize;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+    
+}

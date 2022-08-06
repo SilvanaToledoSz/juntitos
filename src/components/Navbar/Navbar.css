@@ -1,0 +1,10 @@
+.imgLogo {
+    width: 80px;
+    padding: 5px;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
