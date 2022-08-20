@@ -13,15 +13,15 @@ const ItemListContainer = () => {
       {id: 1,
       title: 'Bodys',
       price: 2000,
-      img: '../imgs/id1.jpg'},
+      img: 'https://images.hola.com/imagenes/actualidad/20220820215565/michael-buble-luisana-lopilato-padre-por-cuarta-vez/1-127-603/lopilato-t.jpg?tx=w_744'},
       {id: 2,
       title: 'Almohadon de lactancia',
       price: 2500,
-      img: '../imgs/id2.jpg'},
+      img: '../../imgs/id2.jpg'},
       {id: 2,
       title: 'Ajuares',
       price: 4000,
-      img: '../imgs/id3.jpg'}
+      img: '/imgs/id3.jpg'}
     ]
 
     new Promise((resolve) => {

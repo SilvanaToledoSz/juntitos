@@ -12,7 +12,7 @@ const Item = (props) => {
   return (
     <div>
       <span>{id}</span>
-      <span>{img}</span>
+      <span><img src={img} /></span>
       <span>{title}</span>
       <span>{price}</span>
       <span>{stock}</span>    
