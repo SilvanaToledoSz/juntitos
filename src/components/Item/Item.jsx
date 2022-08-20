@@ -12,7 +12,7 @@ const Item = (props) => {
   
   
   return (
-        <div className="card m-5 cardStyle">
+        <div className="card m-2 cardStyle">
           <img src={img} className="card-img-top imgStyle" alt="..." />
           <div className="card-body">
             <h3 className="card-title">{title}</h3>
