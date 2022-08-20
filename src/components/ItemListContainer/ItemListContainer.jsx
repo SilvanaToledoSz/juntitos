@@ -14,7 +14,7 @@ const ItemListContainer = () => {
       {id: 1,
       title: 'Bodys',
       price: 2000,
-      img: '../ItemListContainer/imgs/id1.jpg'},
+      img: './imgs/id1.jpg'},
       {id: 2,
       title: 'Almohadon de lactancia',
       price: 2500,
