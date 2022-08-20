@@ -4,6 +4,7 @@ import { useState } from 'react'
 import logo from '../Navbar/logo.png'
 import ItemList from '../ItemList/ItemList'
 
+
 const ItemListContainer = () => {
   const [items, setItems] = useState([])
 
@@ -13,7 +14,7 @@ const ItemListContainer = () => {
       {id: 1,
       title: 'Bodys',
       price: 2000,
-      img: 'https://images.hola.com/imagenes/actualidad/20220820215565/michael-buble-luisana-lopilato-padre-por-cuarta-vez/1-127-603/lopilato-t.jpg?tx=w_744'},
+      img: '../ItemListContainer/imgs/id1.jpg'},
       {id: 2,
       title: 'Almohadon de lactancia',
       price: 2500,
