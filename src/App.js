@@ -5,10 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 
-
-function App() {  
-
-  
+function App() {   
   
   return (
     <div className='container'>

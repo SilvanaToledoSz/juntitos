@@ -14,15 +14,18 @@ const ItemListContainer = () => {
       {id: 1,
       title: 'Bodys',
       price: 2000,
-      img: './imgs/id1.jpg'},
+      img: 'https://mimoar.vtexassets.com/arquivos/ids/11441731-800-auto?v=637955755523500000&width=800&height=auto&aspect=true',
+      stock: 3},
       {id: 2,
       title: 'Almohadon de lactancia',
       price: 2500,
-      img: '../../imgs/id2.jpg'},
+      img: 'https://t3q7m8v4.stackpathcdn.com/uploads/productos_imagen_374-1.jpg',
+      stock: 10},
       {id: 2,
       title: 'Ajuares',
       price: 4000,
-      img: '/imgs/id3.jpg'}
+      img: 'https://cartersarg.vtexassets.com/arquivos/ids/213023-800-auto?v=637715046808100000&width=800&height=auto&aspect=true',
+      stock: 0}
     ]
 
     new Promise((resolve) => {
@@ -43,16 +46,17 @@ const ItemListContainer = () => {
   
 
   return (
-    <>
-        <h1 className='text-center mt-5'>Catálogo de productos</h1>
-        <img className='text-center mx-auto d-block' style={{width:'200px'}} src={logo} alt="logo" />
+    <div className='text-center'>
+        <img className='mx-auto d-block m-4' style={{width:'150px'}} src={logo} alt="logo" />
+        <h1 className='mt-5'>Catálogo de productos</h1>
+        
         {items.length ? <ItemList items={items} /> : 
         
           <div className="spinner-border text-warning" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
         }
-    </>
+    </div>
   )
 }
 
