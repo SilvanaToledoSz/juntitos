@@ -1,15 +1,14 @@
 import React from 'react'
-import ItemCount from '../ItemCount/ItemCount';
+
 import './Item.css'
+import { useNavigate } from 'react-router-dom';
 
 const Item = (props) => {
 
-  const onAdd = (contador) => {
-    console.log(`Eligió ${contador} de ${title}`)
-  }
+  
 
   const {id, title, price, stock, img} = props
-  
+  const nav = useNavigate()
   
   return (
         <div className="card m-2 cardStyle">
@@ -18,10 +17,11 @@ const Item = (props) => {
             <h3 className="card-title">{title}</h3>
             <p className="card-text">Precio: ${price}</p>
             <p className="card-text"><small className="text-muted">Id del producto: {id}</small></p>
-            <ItemCount stock={stock} initial={1} onAdd={onAdd} />             
+                         
           </div>
           <div className="card-footer">
             <p className="card-text"><small className="text-muted">Stock disponible: {stock}</small></p>
+            <button className="btn btn-light" onClick={()=> nav(`item/${id}`)}>MÁS INFO</button>
           </div>
         </div>  
     

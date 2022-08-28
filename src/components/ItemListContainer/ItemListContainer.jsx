@@ -3,10 +3,12 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import logo from '../Navbar/logo.png'
 import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([])
+  const {category} = useParams()
 
   useEffect(() => {
 
@@ -14,35 +16,43 @@ const ItemListContainer = () => {
       {id: 1,
       title: 'Bodys',
       price: 2000,
-      img: 'https://mimoar.vtexassets.com/arquivos/ids/11441731-800-auto?v=637955755523500000&width=800&height=auto&aspect=true',
-      stock: 3},
+      img: '../imgs/id1.jpg',
+      stock: 3,
+      category: 'cat1'},
       {id: 2,
       title: 'Almohadon de lactancia',
       price: 2500,
-      img: 'https://t3q7m8v4.stackpathcdn.com/uploads/productos_imagen_374-1.jpg',
-      stock: 10},
-      {id: 2,
+      img: '../imgs/id2.jpg',
+      stock: 10,
+      category: 'cat2'},
+      {id: 3,
       title: 'Ajuares',
       price: 4000,
-      img: 'https://cartersarg.vtexassets.com/arquivos/ids/213023-800-auto?v=637715046808100000&width=800&height=auto&aspect=true',
-      stock: 0}
+      img: '../imgs/id3.jpg',
+      stock: 0,
+      category: 'cat3'}
     ]
 
     new Promise((resolve) => {
-    
+      let productsFiltered = []
+
       setTimeout(()=> {
-        resolve(products)
+        productsFiltered = category ? products.filter((element) => element.category == category) : products 
+        resolve(productsFiltered)
+        console.log(productsFiltered)
+        
       }, 2000)
       
       }).then((data)=>{
-        setItems(data)        
+        setItems(data)
+                
       }).finally(()=> {
         console.log('finalizado')        
       })
       
 
     
-  },[])
+  },[category])
   
 
   return (

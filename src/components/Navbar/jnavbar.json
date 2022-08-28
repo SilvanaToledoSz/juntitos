@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "label": "Catálogo de productos",
+            "to": "/"
+        },
+        {
+            "label": "Categorías",
+            "to": "/category"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+.imgItem {
+    width: 80%;
+    border-radius: 20px;
+}
+
+.colItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.colItemDet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

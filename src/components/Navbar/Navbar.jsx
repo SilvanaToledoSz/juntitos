@@ -3,27 +3,12 @@ import './Navbar.css'
 import logo from './logo.png'
 import NavbarItem from './NavbarItem/NavbarItem.jsx'
 import Cartwidget from './Cartwidget/Cartwidget.jsx'
+import { NavLink } from 'react-router-dom'
+import jnavbar from './jnavbar.json'
 
 const Navbar = () => {
 
-    const navbarItems = [
-        {
-            name:'Home',
-            href:'#'
-        },
-        {
-            name:'Categorías',
-            href:'#'
-        },
-        {
-            name:'Acerca de nosotros',
-            href:'#'
-        },
-        {
-            name:'Cómo comprar',
-            href:'#'
-        }
-    ]
+    const navbarItems = ["Home", "Productos", "Categorías", "Carrito"]
     
   return (
     <nav className="navbar navbar-expand-lg bg-light">
@@ -33,13 +18,19 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navBar navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav navBar">
-                    {navbarItems.map((item, index) => (
-                        <NavbarItem key={index} name={item.name} href={item.href}  />
+         
+                
+
+                {
+                    jnavbar.routes.map((ruta, index) => (
+                        <NavLink key={index} to={ruta.to}>
+                            {ruta.label}
+                        </NavLink>
                     ))
-                    }                    
-                </ul>
-                <Cartwidget />                
+                }
+                <NavLink to={'/'}><Cartwidget /></NavLink>
+               
+                                
             </div>
         </div>
     </nav>
