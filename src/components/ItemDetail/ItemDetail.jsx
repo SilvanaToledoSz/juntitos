@@ -4,11 +4,13 @@ import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({item}) => {
 
+  
+
+  const {id, price, title, img, stock} = item
+
   const onAdd = (contador) => {
     console.log(`Eligió ${contador} de ${title}`)
   }
-
-  const {id, price, title, img, stock} = item
 
   return (
   

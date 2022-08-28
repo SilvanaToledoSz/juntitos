@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
+import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
 
@@ -38,7 +39,7 @@ const ItemDetailContainer = () => {
     
       setTimeout(()=> {
         resolve(products.find((element)=>element.id == id))
-      }, 1000)
+      }, 2000)
       
       }).then((data)=>{
         setItem(data)      
@@ -53,11 +54,14 @@ const ItemDetailContainer = () => {
 
 
   return (
-    <>
-
-      <ItemDetail item={item}/> 
+    <div className='text-center'>
+      
+     
+      <ItemDetail item={item}/>
+      
+      
     
-    </>
+    </div>
   )
 }
 
